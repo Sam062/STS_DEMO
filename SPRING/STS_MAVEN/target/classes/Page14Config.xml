@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+		<bean class="com.app.bean.Page14" name="prodObj">
+			<property name="data">
+				<list>
+					<value>P1</value>
+					<value>P2</value>
+					<value>P3</value>
+				</list>
+			</property>
+			
+			<property name="models">
+				<set>
+					<value>S1</value>
+					<value>S2</value>
+					<value>S3</value>
+				</set>
+			</property>
+			
+			<property name="modes">
+				<map>
+					<entry key="10" value="A"></entry>
+					<entry key="20" value="B"></entry>
+				</map>
+			</property>
+			
+			<property name="context">
+				<props>
+					<prop key="a1">b1</prop>
+					<prop key="a2">b2</prop>
+				</props>
+			</property>
+			
+		</bean>
+
+</beans>

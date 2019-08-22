@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.app.bean.OrderProp" name="ordObj">
+		<property name="id" value="101"></property>
+		
+		<property name="parts">
+			<props>
+				<prop key="SAL">T4</prop>
+				<prop key="CODE">RRT</prop>
+				<prop key="MODEL">RED</prop>
+			</props>
+		</property>
+		
+		<property name="codes">
+			<map>
+				<entry key="101" value="RRT"></entry>
+				<entry key="102" value="PNP"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

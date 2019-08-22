@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="bean.Adddress" name="addobj">
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg value="ABC"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="A1" value="100" />
+				<entry key="A2" value="200" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean class="bean.Employee" name="eobj">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>X1</value>
+				<value>X2</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="addobj" />
+		</constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.app.Contract.Bond" name="bobj" p:mode="ADJ" p:time="2">
+		<property name="service" value="2.8" ></property>
+	</bean>
+	
+	<bean class="com.app.Contract.Contract" name="cobj" p:cid="99" p:code="SAR" p:bo-ref="bobj"></bean>
+	
+	
+
+</beans>

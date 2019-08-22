@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<context:property-placeholder/>
+	<util:list list-class="java.util.ArrayList" id="lsobj">
+		<value>A</value>
+		<value>B</value>
+	</util:list>
+
+	<util:set set-class="java.util.TreeSet" id="sobj">
+		<value>A1</value>
+		<value>A2</value>
+	</util:set>
+
+	<util:map map-class="java.util.TreeMap" id="mobj">
+		<entry key="A1" value="B1" />
+		<entry key="A2" value="B2" />
+	</util:map>
+
+	<util:properties id="pobj">
+		<prop key="ABC">XYZ</prop>
+		<prop key="C">YZ</prop>
+	</util:properties>
+
+</beans>

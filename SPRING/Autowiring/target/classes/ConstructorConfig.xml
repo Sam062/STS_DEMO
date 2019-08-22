@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="ConstructorAutowiring.Address" name="aobj">
+		<constructor-arg>
+			<value>101</value>
+		</constructor-arg>
+	</bean>
+	<bean class="ConstructorAutowiring.Employee" name="eobj" autowire="constructor"/>
+
+</beans>
