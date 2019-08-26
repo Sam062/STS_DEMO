@@ -1,0 +1,317 @@
+Bootstrap :- 
+ It is UI Design framework used to add
+CSS and JS to HTML components.
+
+Bootstrap =(pre-defined)CSS+JS+JQUERY
+
+->This can be used to with any 
+web technology like HTML, Servlets,JSP
+(java) even .net, php etc...
+
+-> It is used to design a webpage which
+is most comptable accross all devices
+like projectors/large screens,
+desktop/laptop screen, tablets screen,
+mobile screen.
+*** It is auto adjustable for all
+screens that is called responsive web
+applications.
+ex:
+
+
+** There are 4 screen types in bootstrap
+Those are:
+1. Large Screen		- lg
+2. Medium Screen	- md
+3. Small Screen		- sm
+4. Extra Small screen	- xs
+
+** Bootstrap Example Template:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" 
+       content="width=device-width,
+            initial-scale=1">
+ <link rel="stylesheet" href=
+ "https://maxcdn.bootstrapcdn.com
+  /bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com
+  /ajax/libs/jquery/3.2.1/jquery.min.js">
+ </script>
+
+<script src="https://maxcdn.bootstrapcdn
+.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+</head>
+<body>
+<div class="container">
+ [  .... code area .... ]
+</div>
+</body>
+</html>
+
+** Bootstrap also supports writing of
+glyphicons using glyph-reference.
+** To see all possible glyphicons,goto
+https://getbootstrap.com/docs/3.3/components/  (link)
+-------------------------------------
+Example #1 buttons.html
+Bootstrap supports 5 types of buttons
+1. basic    2. primary  3. warning
+3. danger   5. information
+
+example code:-
+<html>
+<head>...</head>
+<body>
+<div class="container">
+
+<input type="submit" />
+<input type="submit" class="btn" />
+<input type="submit" 
+            class="btn btn-primary" />
+<input type="submit" 
+             class="btn btn-warning" />
+<input type="submit" 
+             class="btn btn-danger"/>
+<input type="submit" 
+             class="btn btn-info"/>
+</div></body></html>
+---------------------------------
+Task#1
+LocationData.jsp  + Bootstrap
+
+Step#1 Remove lines in <head> tag and
+add given above lines
+
+Step#2 under <body> tag add first line 
+as <div class="container">
+
+Step#3 for <table> tag add bootstrap
+table classes given below
+1.table	
+2.table-striped	
+3.table-bordered	
+4.table-hover	
+5.table-condensed
+example : 
+<table class="table table-bordered
+ table-hover">
+
+Step#4 Remove delete and edit image/text
+and use glyph icons in that place with
+span tag
+ex: 
+<span class="glyphicon glyphicon-trash"></span>
+<span class="glyphicon glyphicon-pencil"></span>
+--------------------------------------
+Register Employee Page With Bootstrap validator.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Employee Register</title>
+
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script
+	src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#contact_form').bootstrapValidator({
+			feedbackIcons : {
+				valid : 'glyphicon glyphicon-ok',
+				invalid : 'glyphicon glyphicon-remove',
+				validating : 'glyphicon glyphicon-refresh'
+			},
+			fields : {
+				empId : {
+					validators : {
+						notEmpty : {
+							message : "Employee Id is required"
+						}
+					}
+				},
+				empName : {
+					validators : {
+						notEmpty : {
+							message : "Employee Name is required"
+						}
+					}
+				},
+				empSal : {
+					validators : {
+						notEmpty : {
+							message : "Employee Sal is required"
+						},
+						numeric : {
+							message : "Employee Sal is not valid"
+						}
+					}
+				},
+				empEmail : {
+					validators : {
+						notEmpty : {
+							message : "Employee Email is required"
+						},
+						emailAddress : {
+							message : "Employee Email is not valid"
+						}
+					}
+				}
+				
+			}
+		});
+		$('#contact_form').data('bootstrapValidator').resetForm();
+
+        // Prevent form submission
+        e.preventDefault();
+
+        // Get the form instance
+        var $form = $(e.target);
+
+        // Get the BootstrapValidator instance
+        var bv = $form.data('bootstrapValidator');
+
+        // Use Ajax to submit form data
+        $.post($form.attr('action'), $form.serialize(), function(result) {
+            console.log(result);
+        }, 'json');
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">Welcome to Employee Register Page</div>
+			<div class="panel-body">
+				<form class="form-horizontal" id="contact_form" method="POST"
+					action="#">
+					<div class="form-group">
+						<label for="empId" class="control-label col-sm-2">Employee
+							Id</label>
+						<div class="col-sm-5">
+							<div class="input-group">
+								<span class="input-group-addon">123</span> <input type="number" min="1"
+									class="form-control" id="empId" name="empId"
+									placeholder="Enter Employee Id" />
+							</div>
+						</div>
+						<div class="col-sm-5 messageContainer"></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="empName">Employee
+							Name</label>
+						<div class="col-sm-5">
+							<div class="input-group">
+								<span class="input-group-addon">ABC</span> <input type="text"
+									class="form-control" id="empName" name="empName" 
+									placeholder="Enter Employee Name" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="empSal">Employee
+							Salary</label>
+						<div class="col-sm-5">
+							<div class="input-group">
+								<span class="input-group-addon">0.00</span> <input type="text"
+									class="form-control" id="empSal" name="empSal" 
+									placeholder="Enter Employee Salary"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="empEmail">Employee
+							Email</label>
+						<div class="col-sm-5">
+							<div class="input-group">
+								<span class="input-group-addon"> <span
+									class="glyphicon glyphicon-envelope"></span>
+								</span> <input type="text" class="form-control" id="empEmail"
+									name="empEmail" placeholder="Enter Employee Email"/>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="row">
+							<input type="submit"
+								class="btn btn-primary col-sm-5 col-sm-offset-1" /> <!-- <input
+								type="reset" class="btn btn-danger col-sm-5 col-sm-offset-1" /> -->
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+---------------------
+Bootstrap Menu bar using nav nav-tabs and dropdown
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script
+	src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+</head>
+<body>
+	<div class="container">
+
+		<ul class="nav nav-tabs">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Location</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a class="#">Vision</a></li>
+					<li><a class="#">Vision</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+
+	<!-- <ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+		</ul> -->
+
+
+
+
+
+</body>
+</html>

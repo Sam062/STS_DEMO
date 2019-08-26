@@ -1,0 +1,54 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+   <div class="container">
+
+	<div class="card">
+      <div class="card-header bg-primary text-white">
+	     Welcome to Employee Data Page
+	  </div>
+      
+	  <div class="card-body">
+		<table class="table table-bordered table-hover">
+		   <tr class="table-success">
+		      <th>ID</th>
+			  <th>NAME</th>
+			  <th>COST</th>
+			  <th colspan="2">Operations</th>
+		   </tr>
+
+		    <tr>
+		      <td>10</td>
+			  <td>AA</td>
+			  <td>22.22</td>
+			  <td><a href="#" class="btn btn-danger">DELETE</a></td>
+			  <td><a href="#" class="btn btn-warning text-white">EDIT</a></td>
+		   </tr>
+		   
+		    <tr>
+		      <td>11</td>
+			  <td>BB</td>
+			  <td>3.3</td>
+			  <td><a href="#" class="btn btn-danger">DELETE</a></td>
+			  <td><a href="#" class="btn btn-warning text-white">EDIT</a></td>
+		   </tr>
+		</table>
+	  </div> 
+
+
+      <div class="card-footer bg-danger text-white">
+	    DELETED SUCCESSFULLY
+	  </div>
+   </div>
+
+
+
+		
+   </div>
+ </body>
+</html>
