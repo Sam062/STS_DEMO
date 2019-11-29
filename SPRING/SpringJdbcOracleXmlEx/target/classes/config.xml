@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="jdbc.properties"
+	/>
+
+	<!-- DataSource -->
+	<bean 
+	class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+	name="dsObj"
+	p:driverClassName="${dc}"
+	p:url="${url}"
+	p:username="${un}"
+	p:password="${pwd}"
+	/>
+	
+	<!-- Jdbc Template object -->
+	<bean class="org.springframework.jdbc.core.JdbcTemplate"
+	name="jtObj"
+	p:dataSource-ref="dsObj"
+	/>
+	
+
+
+</beans>
+
+
+
+

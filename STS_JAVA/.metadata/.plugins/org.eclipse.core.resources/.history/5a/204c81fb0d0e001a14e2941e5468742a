@@ -1,0 +1,40 @@
+package interviewer_Tasks;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SubStringComparisons {
+	 public static String getSmallestAndLargest(String s, int k) {
+	        String smallest = "";
+	        String largest = "";
+	        
+	        // Complete the function
+	        // 'smallest' must be the lexicographically smallest substring of length 'k'
+	        // 'largest' must be the lexicographically largest substring of length 'k'
+	        String[] arr=new String[s.length()];
+	        for(int i=0;i<s.length();i++) {
+				if(i<=s.length()-k)
+				arr[i]=s.substring(i, i+3);
+			}
+	        for (String string : arr) {
+				System.out.print(string+" ");
+			}
+	        
+//	        NavigableSet<String> al=new TreeSet<String>();
+//			for(int i=0;i<s.length();i++) {
+//				if(i<=s.length()-k)
+//				al.add(s.substring(i, i+3));
+//			}
+	        //return al.first() + "\n" + al.last();
+	        return smallest+" "+largest;
+	    }
+	 
+	 public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("In[put");
+		String s=sc.next();
+		int sub=sc.nextInt();
+		System.out.println(SubStringComparisons.getSmallestAndLargest(s, sub));
+	}
+
+}

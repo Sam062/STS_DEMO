@@ -39,7 +39,5 @@ public class ArrayFreqCollection {
 			if(m.get(num)>=1)
 				System.out.println(num+"="+m.get(num)+" times");
 		}
-		
-		
 	}
 }

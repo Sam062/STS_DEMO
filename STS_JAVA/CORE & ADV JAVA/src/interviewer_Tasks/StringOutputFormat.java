@@ -8,20 +8,20 @@ public class StringOutputFormat {
 //		int num=1231;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Input String :");
-		String s=sc.nextLine();
+		String string=sc.nextLine();
 		System.out.println("input 3 digit number :");
-		int num=sc.nextInt();
+		int number=sc.nextInt();
 		
 
-		int s1=s.length();
+		int s1=string.length();
 		int numdig=0;
-		int temp=num;
+		int temp=number;
 		while(temp>0) {
 			numdig++;
 			temp=temp/10;
 		}
 		String fin="";
-		fin+=s;
+		fin+=string;
 		if(fin.length()>12) {
 			fin=fin.substring(0, 12);
 		}
@@ -30,7 +30,7 @@ public class StringOutputFormat {
 			fin+=' ';
 		}
 		for (int i = 0; i < 3 && numdig<3; i++) {
-			if(num==0)
+			if(number==0)
 			{
 				fin+="00";
 				break;
@@ -42,7 +42,7 @@ public class StringOutputFormat {
 			}
 		}
 
-		fin+=num;
+		fin+=number;
 		System.out.println(fin+" "+fin.length());
 	}
 }
