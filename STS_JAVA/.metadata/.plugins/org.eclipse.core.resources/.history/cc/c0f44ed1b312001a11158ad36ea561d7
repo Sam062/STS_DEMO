@@ -1,0 +1,44 @@
+package collectionConcepts;
+
+import java.util.TreeSet;
+
+class Employee implements Comparable {
+	int empId;
+	String empName;
+	Employee(String name,int eid){
+		this.empId=eid;
+		this.empName=name;
+	}
+	@Override
+	public String toString() {
+		return empName+"--"+empId;
+	}
+
+	
+	@Override
+	public int compareTo(Object o) {
+		int eid1=this.empId;
+		Employee e=(Employee)o;
+		int eid2=e.empId;
+		if(eid1<eid2)
+			return -1;
+		else if(eid1>eid2)
+			return +1;	
+		else
+			return 0;
+	}
+}
+public class ComparableComparator{
+	public static void main(String[] args) {
+		Employee e1=new Employee("shivam", 21154);
+		Employee e2=new Employee("shashank", 21153);
+		Employee e3=new Employee("shubham", 21155);
+		Employee e4=new Employee("abcd", 21120);
+		TreeSet t=new TreeSet();
+		t.add(e1);
+		t.add(e2);
+		t.add(e3);
+		t.add(e4);
+		System.out.println(t);
+	}	
+} 
