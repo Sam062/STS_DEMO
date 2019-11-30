@@ -7,13 +7,17 @@ public class SubStringComparisons {
     public static String getSmallestAndLargest(String s, int k) {
         String smallest = "";
         String largest = "";
-        String[] arr=new String[s.length()-2];
-        for (int i = 0; i < (arr.length-k)+1; i++) {
-			if(s.substring(i,i+k)!="")
-				arr[i]=s.substring(i, i+k);
+        String[] arr=new String[s.length()];
+        for (int i = 0; i < arr.length; i++) {
+			arr[i]=s.substring(i, i+k);
 			System.out.println(arr[i]);
+			
 		}
-                
+        
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+        
         return smallest + "\n" + largest;
     }
 

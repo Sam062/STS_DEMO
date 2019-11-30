@@ -8,7 +8,7 @@ public class SubStringComparisons {
         String smallest = "";
         String largest = "";
         String[] arr=new String[s.length()-2];
-        for (int i = 0; i < (arr.length-k)+1; i++) {
+        for (int i = 0; i < arr.length; i++) {
 			if(s.substring(i,i+k)!="")
 				arr[i]=s.substring(i, i+k);
 			System.out.println(arr[i]);
