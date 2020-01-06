@@ -13,8 +13,22 @@ public class SubStringComparisons {
 				arr[i]=s.substring(i, i+k);
 			System.out.println(arr[i]);
 		}
+        for (int i = 0; i < arr.length; i++) {
+        	for (int j = 1; j < arr.length; j++) {
+				System.out.println(arr[i].compareTo(arr[j]));
+				if(arr[i].compareTo(arr[j])>0)
+				{
+					String temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+        for (String string : arr) {
+			System.out.println(string);
+		}
                 
-        return smallest + "\n" + largest;
+        return  ""; //smallest + "\n" + largest;
     }
 
 
@@ -25,6 +39,6 @@ public class SubStringComparisons {
         int k = scan.nextInt();
         scan.close();
       
-        System.out.println(getSmallestAndLargest(s, k));
+        getSmallestAndLargest(s, k);
     }
 }
