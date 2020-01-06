@@ -7,30 +7,38 @@ public class SubStringComparisons {
     public static String getSmallestAndLargest(String s, int k) {
         String smallest = "";
         String largest = "";
-        String[] arr=new String[s.length()-2];
-        for (int i = 0; i < (arr.length-k)+1; i++) {
-			if(s.substring(i,i+k)!="")
-				arr[i]=s.substring(i, i+k);
-			System.out.println(arr[i]);
-		}
-        for (int i = 0; i < arr.length; i++) {
-        	for (int j = 1; j < arr.length; j++) {
-				System.out.println(arr[i].compareTo(arr[j]));
-				if(arr[i].compareTo(arr[j])>0)
-				{
-					String temp=arr[i];
-					arr[i]=arr[j];
-					arr[j]=temp;
-				}
-			}
-		}
-        for (String string : arr) {
-			System.out.println(string);
-		}
-                
-        return  ""; //smallest + "\n" + largest;
+        
+        if(s.length()>k) {
+        	String[] arr=new String[(s.length()-k)+1];
+            
+            for (int i = 0; i < arr.length; i++) {
+    			if(s.substring(i,i+k)!="")
+    				arr[i]=s.substring(i, i+k);
+    			//System.out.println(arr[i]);
+    		}
+            
+           
+        	// sorting logic using compareTo() 
+        	for(int i = 0; i<arr.length-1; i++) {
+                for (int j = i+1; j<arr.length; j++) {
+                   if(arr[i].compareTo(arr[j])>0) {
+                      String temp = arr[i];
+                      arr[i] = arr[j];
+                      arr[j] = temp;
+                   }
+                }
+             }
+//        	System.out.println("\nSorted ");
+//            for (String string : arr) {
+//    			System.out.println(string);
+//    		}
+//        
+        smallest=arr[0];
+        largest=arr[arr.length-1];
+        }     
+        System.out.println();
+        return  smallest + "\n" + largest;
     }
-
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -39,6 +47,6 @@ public class SubStringComparisons {
         int k = scan.nextInt();
         scan.close();
       
-        getSmallestAndLargest(s, k);
+        System.out.println(getSmallestAndLargest(s, k));
     }
 }
