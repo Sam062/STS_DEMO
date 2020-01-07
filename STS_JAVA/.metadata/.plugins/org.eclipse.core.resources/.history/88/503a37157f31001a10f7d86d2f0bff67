@@ -20,10 +20,7 @@ class LambdaExpression{
 		ABC a=(x,y)->System.out.println("Sum"+(x+y));
 		a.add(10,20);
 		
-		ABC b=(x,y)->{
-			System.out.println("SUB"+(x-y));
-			System.out.println("HELLO HELO");
-		};
+		ABC b=(x,y)->System.out.println("SUB"+(x-y));
 		b.add(1500, 500);
 	}
 }
