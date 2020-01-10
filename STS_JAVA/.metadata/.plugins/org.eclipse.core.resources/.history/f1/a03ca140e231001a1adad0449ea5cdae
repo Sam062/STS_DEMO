@@ -1,0 +1,27 @@
+package interviewer_Tasks;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class JavaMapPhonebook {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Input no :");
+		int entries=sc.nextInt();
+		String name="";
+		int num;
+		Map<String, Integer> phonebook=new LinkedHashMap<>();
+		sc.hasNextLine();
+		for (int i = 0; i < entries; i++) {
+			name=sc.nextLine();
+			sc.hasNextLine();
+			num=sc.nextInt();
+			sc.hasNextLine();
+			phonebook.put(name, num);
+		}
+		System.out.println(phonebook);
+		
+	}
+
+}
