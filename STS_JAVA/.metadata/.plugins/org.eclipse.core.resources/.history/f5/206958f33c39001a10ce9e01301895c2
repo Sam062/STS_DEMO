@@ -1,0 +1,24 @@
+package hackerRank_ProblemSolving;
+
+import java.util.Scanner;
+
+public class Staircase {
+static void staircase(int n) {
+	for (int i = 0; i < n; i++) {
+		for (int j = i; j < n; j++) {
+			System.out.print(" ");
+		}
+		System.out.print("#");
+		System.out.println();
+	}
+        
+    }
+
+    private static final Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+    	System.out.println("input size :");
+    	int size=sc.nextInt();
+    	staircase(size);
+	
+    }
+}

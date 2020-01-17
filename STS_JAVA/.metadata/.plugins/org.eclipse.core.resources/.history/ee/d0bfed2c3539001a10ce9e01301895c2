@@ -1,0 +1,27 @@
+package hackerRank_ProblemSolving;
+
+import java.util.List;
+
+class Result {
+
+    /*
+     * Complete the 'diagonalDifference' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+     */
+
+    public static int diagonalDifference(List<List<Integer>> arr) {
+		return 0;
+    // Write your code here
+		
+
+    }
+
+}
+
+public class DiagonalDifference {
+    public static void main(String[] args){
+        
+    }
+}
