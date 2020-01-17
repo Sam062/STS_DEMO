@@ -32,6 +32,10 @@ public class OverridingRules extends A {
 		a.two();
 		a.three();
 		//a.four();
+		System.out.println();
+		A a1=new A();
+		a1.one();
+		a1.two();
 	}
 
 }
