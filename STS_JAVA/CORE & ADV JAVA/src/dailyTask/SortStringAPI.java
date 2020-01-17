@@ -1,5 +1,7 @@
 package dailyTask;
 
+import java.util.Arrays;
+
 public class SortStringAPI {
 	public static void main(String[] args) {
 		String original="SATYA";
