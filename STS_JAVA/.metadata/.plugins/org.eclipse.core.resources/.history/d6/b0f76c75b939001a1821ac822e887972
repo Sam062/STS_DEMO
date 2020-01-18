@@ -1,0 +1,18 @@
+package hackerRank_ProblemSolving;
+
+import java.util.Scanner;
+
+public class TimeConversion {
+	static String timeConversion(String s) {
+
+		return s;
+    }
+	private static final Scanner scan = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		System.out.println("input string :");
+		String s=scan.nextLine();
+		System.out.println(s);
+	}
+
+}
