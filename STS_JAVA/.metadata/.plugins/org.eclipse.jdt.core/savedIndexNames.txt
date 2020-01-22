@@ -1,4 +1,3 @@
 INDEX VERSION 1.131+F:\STS_DEMO\STS_JAVA\.metadata\.plugins\org.eclipse.jdt.core
 3349513662.index
 4210876544.index
-4009606478.index
