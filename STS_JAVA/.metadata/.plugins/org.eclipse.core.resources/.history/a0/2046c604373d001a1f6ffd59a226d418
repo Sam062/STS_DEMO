@@ -1,0 +1,14 @@
+
+public class StringDemo {
+	public static void main(String[] args) {
+		
+		String str=new String("Shivam");
+		str=str.concat("Mishra");
+		System.out.println(str);
+		
+		StringBuilder sb=new StringBuilder("Hello world");
+		sb.insert(11,"1");
+        System.out.println(sb);
+	}
+
+}
