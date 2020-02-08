@@ -12,7 +12,7 @@ public class Insert {
 		String un="system";
 		String pwd="root";
 		
-		String sql="insert into emptab values(?,?,?,?)";
+		String sql="insert into stdtab values(?,?,?)";
 		
 		try {
 			Class.forName(driver);
@@ -25,17 +25,14 @@ public class Insert {
 			int empId=sc.nextInt();
 			System.out.println("input EMP_NAME");
 			String empName=sc.next();
-			System.out.println("input GENDER");
-			String gender=sc.next();
 			System.out.println("input EMP_SAL");
-			double empSal=sc.nextDouble();
+			int empSal=sc.nextInt();
 			sc.close();
 			//END
 			
 			ps.setInt(1,empId);
 			ps.setString(2, empName);
-			ps.setString(3, gender);
-			ps.setDouble(4, empSal);
+			ps.setDouble(3, empSal);
 			
 			
 			int count=ps.executeUpdate();
