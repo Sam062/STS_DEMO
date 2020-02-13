@@ -2,18 +2,21 @@ package interviewer_Tasks;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class ArrayToSet {
 	public static void main(String[] args) {
-		Integer[] a= {1,1,2,3,35,4,8,7,8,9,6,1,10};
+		Integer[] a= {1,1,2,3,4,5};
 		
 		List s1=Arrays.asList(a);
-
-		Set<Integer> s=new TreeSet<>(s1);
-		System.out.println(s);
+		List s2=Arrays.asList(a);
 		
-	}
+		System.out.println(s1.containsAll(s2));
+		s1.retainAll(s2);
+		System.out.println("retainAll");
+		System.out.println(s1);
+		
 
+//		Set<Integer> s=new LinkedHashSet<>(s1);
+//		System.out.println(s);
+	}
 }
