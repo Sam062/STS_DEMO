@@ -8,7 +8,7 @@ public class InsertIntoDB {
 
 	public static void main(String[] args) {
 		String driver="com.mysql.jdbc.Driver";
-		String url="jdbc:mysql://localhost:3306/Shivam";// DB name is Shivam
+		String url="jdbc:mysql://localhost:3306/sam";// DB name is sam
 		String un="root";
 		String pwd="root";
 		

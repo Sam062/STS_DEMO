@@ -2,7 +2,7 @@ package lambda_expression;
 
 import java.util.function.Supplier;
 
-public class SupplierInterface {
+public class OtpUsingSupplierInterface {
 	public static void main(String[] args) {
 		Supplier<String> s=()->{
 			String otp="";
