@@ -1,0 +1,38 @@
+package interviewer_Tasks;
+
+public class VariableCheck {
+//	void show(byte b) {
+//		System.out.println("byte method");
+//	}
+//	void show(short b) {
+//		System.out.println("short method");
+//	}
+//	void show(int b) {
+//		System.out.println("int method");
+//	}
+//	void show(Integer b) {
+//		System.out.println("Integer method");
+//	}
+//	void show(Byte b) {
+//		System.out.println("byte class method");
+//	}
+//	void show(long b) {
+//		System.out.println("byte class method");
+//	}
+//	void show(double b) {
+//		System.out.println("byte class method");
+//	}
+	void show(int a,float b) {
+		System.out.println("param");
+	}
+	void show(float a,int b) {
+		System.out.println("param");
+	}
+	
+	public static void main(String[] args) {
+		VariableCheck d=new VariableCheck();
+		d.show(1.1, 10);
+		
+	}
+
+}

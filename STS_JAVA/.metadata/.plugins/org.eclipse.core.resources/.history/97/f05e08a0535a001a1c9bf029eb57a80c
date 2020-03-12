@@ -1,0 +1,47 @@
+package dateAndTimeApi;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Period {
+	public static void main(String[] args) throws ParseException {
+		LocalDate birthday=LocalDate.of(1997, 02, 06);
+		LocalDate today=LocalDate.now();
+		
+		java.time.Period p=java.time.Period.between(birthday, today);
+		
+//		System.out.println("You are of : "+p.getYears()+"yrs,"+p.getMonths()+"months,"+p.getDays());
+//		
+		
+//		Date d=new Date();
+//		System.out.println(d);
+//		String str=new String(d.toString());
+		
+		Date d1=new SimpleDateFormat("yyyy-MM-dd").parse("2020-02-28");
+		System.out.println(d1);
+		String s=new String(d1.toString());
+		
+		
+		if(d1.compareTo(new Date()))
+			System.out.println("true");
+		
+		
+		
+//		if((str.split(" "))[2].equals((s.split(" "))[2]))
+//				System.out.println("True");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

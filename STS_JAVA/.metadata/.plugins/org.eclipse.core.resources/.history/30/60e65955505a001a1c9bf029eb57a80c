@@ -1,0 +1,28 @@
+package dateAndTimeApi;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Period {
+	public static void main(String[] args) {
+		LocalDate birthday=LocalDate.of(1997, 02, 06);
+		LocalDate today=LocalDate.now();
+		
+		java.time.Period p=java.time.Period.between(birthday, today);
+		
+//		System.out.println("You are of : "+p.getYears()+"yrs,"+p.getMonths()+"months,"+p.getDays());
+//		
+		
+		Date d=new Date();
+		String str=new String(d.toString());
+		System.out.println((str.split(" "))[1]);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
